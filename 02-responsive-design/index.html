@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo: Responsive Design</title>
+
+  <style>
+    nav {
+      &.hidden {
+        visibility: hidden;
+      }
+
+      & ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        & li {
+          display: inline;
+        }
+      }
+    }
+
+    main {
+      font-size: 1.2rem;
+      margin: 2rem;
+    }
+
+    button {
+      padding: 1rem;
+
+      &.mobile-menu {
+        margin: 1rem;
+        float: right;
+      }
+    }
+    
+    @media all and (min-width: 600px) {
+      main {
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      button {
+        padding: 1px 4px;
+
+        &.mobile-menu {
+          display: none;
+        }
+      }
+    }
+  </style>
+
+  <script>
+    let nav
+    
+    const toggleMenu = () => {
+      nav.classList.toggle('hidden')
+    }
+
+    window.addEventListener("DOMContentLoaded", (e) => {
+      nav = document.querySelector('nav') 
+    })
+
+    window.addEventListener('resize', (e) => {
+      if (window.innerWidth > 600) {
+        nav.classList.remove('hidden')
+      } else {
+        nav.classList.add('hidden')
+      }
+    })
+  </script>
+</head>
+<body>
+  <header>
+    <button class="mobile-menu" aria-label="Menu" onclick="toggleMenu()">
+      <svg width="10" height="10">
+        <path d="M0,1 10,1" stroke="#000" stroke-width="2"/>
+        <path d="M0,5 10,5" stroke="#000" stroke-width="2"/>
+        <path d="M0,9 10,9" stroke="#000" stroke-width="2"/>
+      </svg>
+    </button>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="products.html">
+            Products
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Home</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad voluptatibus ducimus provident, aspernatur ex voluptas quibusdam pariatur nesciunt excepturi qui soluta sequi perspiciatis unde ipsam delectus suscipit aliquid tempore rem deleniti molestias necessitatibus!
+    </p>
+    <h2>
+      Consequatur impedit
+    </h2>
+    <p>
+      Architecto deleniti ratione, recusandae, adipisci autem fugit cupiditate molestias asperiores eveniet. Praesentium dolorum laudantium, officia impedit eius expedita commodi unde adipisci reprehenderit aut quas dolore labore optio ullam excepturi necessitatibus magni, ex vero doloremque molestiae accusantium? Voluptas placeat deleniti laudantium iste pariatur incidunt suscipit, distinctio, aut voluptatibus assumenda labore, obcaecati expedita aliquid atque aperiam nisi!
+    </p>
+    <h2>
+        Excepturi ex dolorem
+    </h2>
+    <p>
+      Hic minima aliquid expedita repudiandae nulla at, natus suscipit, iusto cum nostrum voluptate, libero et ad deserunt necessitatibus autem quo soluta placeat. Ea adipisci commodi suscipit inventore error aliquid accusantium laudantium culpa! Recusandae, repellat similique facilis saepe porro aut assumenda corrupti quis totam minima, molestiae non iure possimus perspiciatis id repudiandae quidem nulla, beatae eos error nihil qui? Modi officia quia beatae magni eos, tenetur quasi nemo iste aliquid exercitationem veniam? Quam voluptas blanditiis voluptatum repellat aliquid sint facilis placeat iusto! Ullam maiores beatae minus quod dicta error quia quasi non dolores, aliquid rerum aspernatur totam impedit commodi iste sint libero vitae harum, labore repellendus.
+    </p>
+    <button onclick="alert('You have registered!')">Sign up!</button>
+  </main>
+</body>
+</html>

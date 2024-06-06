@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Demo: Semantic HTML</title>
+    <style>
+      .menu {
+        & span {
+          color: blue;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+      .heading-1 {
+        font-size: 32px;
+        font-weight: 600;
+        padding: 21.5px 0;
+      }
+
+      .heading-2 {
+        font-size: 24px;
+        font-weight: 600;
+        padding: 20px 0;
+      }
+
+      .button {
+        margin: 16px 0 0 0;
+        background-color: #e9e9ed;
+        border: 1px solid #8f8f9d;
+        border-radius: 4px;
+        width: max-content;
+        font-size: 13px;
+        padding: 2px 6px;
+        font-family: sans-serif;
+        cursor: default;
+
+        &:hover {
+          background-color: #d0d0d7;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="menu">
+        <span onclick="window.location = 'index.html'">
+          Home
+        </span>
+        <span onclick="window.location = 'about.html'">
+          About
+        </span>
+        <span onclick="window.location = 'products.html'">
+          Products
+        </span>
+      </div>
+    </div>
+    <div class="heading-1">
+      Home
+    </div>
+    <div class="text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad voluptatibus ducimus provident, aspernatur ex voluptas quibusdam pariatur nesciunt excepturi qui soluta sequi perspiciatis unde ipsam delectus suscipit aliquid tempore rem deleniti molestias necessitatibus!
+    </div>
+    <div class="heading-2">
+      Consequatur impedit
+    </div>
+    <div class="text">
+      Architecto deleniti ratione, recusandae, adipisci autem fugit cupiditate molestias asperiores eveniet. Praesentium dolorum laudantium, officia impedit eius expedita commodi unde adipisci reprehenderit aut quas dolore labore optio ullam excepturi necessitatibus magni, ex vero doloremque molestiae accusantium? Voluptas placeat deleniti laudantium iste pariatur incidunt suscipit, distinctio, aut voluptatibus assumenda labore, obcaecati expedita aliquid atque aperiam nisi!
+    </div>
+    <div class="heading-2">
+        Excepturi ex dolorem
+    </div>
+    <div class="text">
+      Hic minima aliquid expedita repudiandae nulla at, natus suscipit, iusto cum nostrum voluptate, libero et ad deserunt necessitatibus autem quo soluta placeat. Ea adipisci commodi suscipit inventore error aliquid accusantium laudantium culpa! Recusandae, repellat similique facilis saepe porro aut assumenda corrupti quis totam minima, molestiae non iure possimus perspiciatis id repudiandae quidem nulla, beatae eos error nihil qui? Modi officia quia beatae magni eos, tenetur quasi nemo iste aliquid exercitationem veniam? Quam voluptas blanditiis voluptatum repellat aliquid sint facilis placeat iusto! Ullam maiores beatae minus quod dicta error quia quasi non dolores, aliquid rerum aspernatur totam impedit commodi iste sint libero vitae harum, labore repellendus.
+    </div>
+    <div class="button" onclick="alert('You have registered!')">
+      Sign up!
+    </div>
+  </body>
+</html>
